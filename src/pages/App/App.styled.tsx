@@ -6,6 +6,7 @@ export const GlobalCSS = createGlobalStyle`
         margin: 0;
         box-sizing: border-box;
         outline: none;
+        -webkit-tap-highlight-color: transparent;
         font-family: 'Poppins', sans-serif;
     }
     a {

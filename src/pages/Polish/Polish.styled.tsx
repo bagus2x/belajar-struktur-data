@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Button } from '../../components/styled/Button';
 import { Paper } from '../../components/styled/Paper';
-import { H1 } from '../../components/styled/Text';
 
 export const Container = styled.div`
 	width: 100%;
@@ -37,11 +36,15 @@ export const SelectWrapper = styled.div`
 	}
 `;
 
-export const BtnSwitch = styled(H1)`
+export const BtnSwitch = styled.button`
 	user-select: none;
+	background: none;
 	cursor: pointer;
+	display: grid;
+	place-items: center;
+	width: 60px;
 	&:active {
-		transform: scale(110%);
+		transform: scale(120%);
 	}
 `;
 
@@ -99,4 +102,4 @@ export const ButtonHome = styled(Link)`
 	&:hover {
 		background: #ccc;
 	}
-`
+`;

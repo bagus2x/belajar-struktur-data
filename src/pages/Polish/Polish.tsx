@@ -7,6 +7,7 @@ import { InfixPostfix, PolishCalculator } from './calculator';
 import InfixPostfixTable from './InfixPostfixTable';
 import { BtnSwitch, ButtonHome, Container, ContentWrapper, CoverterButton, InputWrapper, ResultBox, SelectWrapper } from './Polish.styled';
 import { ReactComponent as HomeIcon } from '../../assets/icons/home.svg';
+import { ReactComponent as SwitchIcon } from '../../assets/icons/switch.svg';
 
 const getPattern = (pattern: string): string => {
 	switch (pattern) {
@@ -78,14 +79,16 @@ function Polish() {
 	return (
 		<Container>
 			<ContentWrapper>
-				<H1>Konverter Notasi Polish </H1>
+				<H1>Notasi Polish</H1>
 				<SelectWrapper>
 					<Menu onChange={handleOriginType} title={originType} fullWidth>
 						<ItemMenu>Infix</ItemMenu>
 						<ItemMenu>Prefix</ItemMenu>
 						<ItemMenu>Postfix</ItemMenu>
 					</Menu>
-					<BtnSwitch onClick={handleSwitch}>{'<->'}</BtnSwitch>
+					<BtnSwitch onClick={handleSwitch}>
+						<SwitchIcon />
+					</BtnSwitch>
 					<Menu onChange={handleExpectedType} title={expectedType} fullWidth>
 						<ItemMenu>Infix</ItemMenu>
 						<ItemMenu>Prefix</ItemMenu>
