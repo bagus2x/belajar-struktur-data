@@ -100,7 +100,7 @@ function Polish() {
 					<ResultBox>{expectedValue || getPattern(expectedType)}</ResultBox>
 				</InputWrapper>
 				<H2>Tabel Stack</H2>
-				<H5 style={{ margin: 0, alignSelf: 'flex-start' }}>Input: A*B</H5>
+				<H5 style={{ margin: 0, alignSelf: 'flex-start' }}>Input: {originValue}</H5>
 				{originType === 'Infix' && expectedType === 'Postfix' ? (
 					<InfixPostfixTable record={postfixTable} />
 				) : (
