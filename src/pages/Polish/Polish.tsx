@@ -71,8 +71,6 @@ function Polish() {
 			setExpectedValue(PolishCalculator.postfixToPrefix(originValue).join(''));
 		} else if (originType === 'Postfix' && expectedType === 'Postfix') {
 			setExpectedValue(originValue);
-		} else {
-			alert('error: metode tidak ditemukan');
 		}
 	};
 
@@ -96,7 +94,7 @@ function Polish() {
 					</Menu>
 				</SelectWrapper>
 				<InputWrapper>
-					<Input fullWidth onBlur={handleOriginvalue} placeholder={getPattern(originType)} />
+					<Input fullWidth onBlur={handleOriginvalue} placeholder={'contoh: ' + getPattern(originType)} />
 					<CoverterButton onClick={handleCalculation} size="sm">
 						Run
 					</CoverterButton>
@@ -106,11 +104,7 @@ function Polish() {
 				<H5 style={{ margin: 0, alignSelf: 'flex-start' }}>Input: {originValue}</H5>
 				{originType === 'Infix' && expectedType === 'Postfix' ? (
 					<InfixPostfixTable record={postfixTable} />
-				) : (
-					<H4>
-						Tabel {originType} ke {expectedType} Belum tersedia
-					</H4>
-				)}
+				) : ''}
 			</ContentWrapper>
 			<ButtonHome to="/">
 				<HomeIcon />
