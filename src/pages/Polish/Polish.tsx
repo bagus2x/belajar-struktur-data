@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Menu } from '../../components/Menu/Menu';
 import { ItemMenu } from '../../components/Menu/Menu.styled';
 import { Input } from '../../components/styled/Input';
-import { H1, H2, H4, H5 } from '../../components/styled/Text';
+import { H1, H2, H5 } from '../../components/styled/Text';
 import { InfixPostfix, PolishCalculator } from './calculator';
 import InfixPostfixTable from './InfixPostfixTable';
 import { BtnSwitch, ButtonHome, Container, ContentWrapper, CoverterButton, InputWrapper, ResultBox, SelectWrapper } from './Polish.styled';
